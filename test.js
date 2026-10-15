@@ -13,6 +13,7 @@ ObjectConstructor.prototype.constructor = Object;
 test('main', t => {
 	t.true(isPlainObject({}));
 	t.true(isPlainObject({foo: true}));
+	t.true(isPlainObject(Object.assign({}, {a: 1}))); // eslint-disable-line prefer-object-spread
 	t.true(isPlainObject({constructor: Foo}));
 	t.true(isPlainObject({valueOf: 0}));
 	t.true(isPlainObject(Object.create(null)));
