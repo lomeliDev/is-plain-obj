@@ -10,6 +10,10 @@ function ObjectConstructor() {}
 
 ObjectConstructor.prototype.constructor = Object;
 
+test('array no es plano', t => {
+	t.false(isPlainObject([]));
+});
+
 test('main', t => {
 	t.true(isPlainObject({}));
 	t.true(isPlainObject({foo: true}));
