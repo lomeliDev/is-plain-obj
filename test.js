@@ -35,6 +35,7 @@ test('main', t => {
 	t.false(isPlainObject(false));
 	t.false(isPlainObject(new ObjectConstructor()));
 	t.false(isPlainObject(Object.create({})));
+	t.false(isPlainObject({[Symbol.toStringTag]: 'x'}));
 
 	(function () {
 		t.false(isPlainObject(arguments)); // eslint-disable-line prefer-rest-params
