@@ -44,3 +44,7 @@ test('main', t => {
 	foo.constructor = Object;
 	t.false(isPlainObject(foo));
 });
+
+test('Object.create(null)', t => {
+	t.true(isPlainObject(Object.create(null)));
+});
