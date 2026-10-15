@@ -22,7 +22,6 @@ test('main', t => {
 	t.false(isPlainObject(['foo', 'bar']));
 	t.false(isPlainObject(new Foo(1)));
 	t.false(isPlainObject(Math));
-	t.false(isPlainObject(JSON));
 	t.false(isPlainObject(Atomics));
 	t.false(isPlainObject(Error));
 	t.false(isPlainObject(() => {}));
@@ -43,4 +42,8 @@ test('main', t => {
 	const foo = new Foo();
 	foo.constructor = Object;
 	t.false(isPlainObject(foo));
+});
+
+test('JSON no es plano', t => {
+	t.false(isPlainObject(JSON));
 });
