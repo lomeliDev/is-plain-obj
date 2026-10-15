@@ -40,6 +40,15 @@ isPlainObject(Math);
 //=> false
 ```
 
+## Examples
+
+```js
+const object = Object.create(null);
+
+isPlainObject(object);
+//=> true
+```
+
 ## Related
 
 - [is-obj](https://github.com/sindresorhus/is-obj) - Check if a value is an object
