@@ -44,3 +44,7 @@ test('main', t => {
 	foo.constructor = Object;
 	t.false(isPlainObject(foo));
 });
+
+test('Math no es plano', t => {
+	t.false(isPlainObject(Math));
+});
