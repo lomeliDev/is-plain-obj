@@ -45,6 +45,6 @@ test('main', t => {
 	t.false(isPlainObject(foo));
 });
 
-test('Proxy sobre {}', t => {
+test('Proxy de un objeto vacío', t => {
 	t.true(isPlainObject(new Proxy({}, {})));
 });
