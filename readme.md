@@ -40,6 +40,20 @@ isPlainObject(Math);
 //=> false
 ```
 
+## Uso con TypeScript
+
+`isPlainObject` funciona como un *type guard* y estrecha el tipo de `unknown` a un objeto plano:
+
+```ts
+import isPlainObject from 'is-plain-obj';
+
+const value: unknown = {foo: 'bar'};
+
+if (isPlainObject(value)) {
+	console.log(value.foo);
+}
+```
+
 ## Related
 
 - [is-obj](https://github.com/sindresorhus/is-obj) - Check if a value is an object
