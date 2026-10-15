@@ -16,6 +16,7 @@ test('main', t => {
 	t.true(isPlainObject({constructor: Foo}));
 	t.true(isPlainObject({valueOf: 0}));
 	t.true(isPlainObject(Object.create(null)));
+	t.true(isPlainObject(Object.create(Object.create(null))));
 	// eslint-disable-next-line no-object-constructor
 	t.true(isPlainObject(new Object()));
 	t.true(isPlainObject(runInNewContext('({})')));
