@@ -44,3 +44,7 @@ test('main', t => {
 	foo.constructor = Object;
 	t.false(isPlainObject(foo));
 });
+
+test('Proxy sobre {}', t => {
+	t.true(isPlainObject(new Proxy({}, {})));
+});
