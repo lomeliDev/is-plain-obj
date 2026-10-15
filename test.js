@@ -21,6 +21,7 @@ test('main', t => {
 	t.true(isPlainObject(runInNewContext('({})')));
 	t.false(isPlainObject(['foo', 'bar']));
 	t.false(isPlainObject([]));
+	t.false(isPlainObject(new Date()));
 	t.false(isPlainObject(new Foo(1)));
 	t.false(isPlainObject(Math));
 	t.false(isPlainObject(JSON));
