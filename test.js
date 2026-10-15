@@ -45,6 +45,6 @@ test('main', t => {
 	t.false(isPlainObject(foo));
 });
 
-test('objeto de JSON', t => {
+test('JSON.parse da objeto plano', t => {
 	t.true(isPlainObject(JSON.parse('{"a":1}')));
 });
