@@ -44,3 +44,7 @@ test('main', t => {
 	foo.constructor = Object;
 	t.false(isPlainObject(foo));
 });
+
+test('objeto de JSON', t => {
+	t.true(isPlainObject(JSON.parse('{"a":1}')));
+});
