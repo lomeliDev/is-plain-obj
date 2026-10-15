@@ -19,6 +19,7 @@ test('main', t => {
 	// eslint-disable-next-line no-object-constructor
 	t.true(isPlainObject(new Object()));
 	t.true(isPlainObject(runInNewContext('({})')));
+	t.false(isPlainObject({[Symbol.iterator]() {}}));
 	t.false(isPlainObject(['foo', 'bar']));
 	t.false(isPlainObject(new Foo(1)));
 	t.false(isPlainObject(Math));
