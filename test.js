@@ -45,6 +45,6 @@ test('main', t => {
 	t.false(isPlainObject(foo));
 });
 
-test('Object.create del prototipo', t => {
+test('Object.create(Object.prototype)', t => {
 	t.true(isPlainObject(Object.create(Object.prototype)));
 });
