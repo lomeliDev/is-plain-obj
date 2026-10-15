@@ -22,8 +22,7 @@ isPlainObject({foo: 'bar'});
 isPlainObject(new Object());
 //=> true
 
-isPlainObject(Object.create(null));
-//=> true
+isPlainObject(Object.create(null)) //=> true
 
 // This works across realms
 isPlainObject(runInNewContext('({})'));
